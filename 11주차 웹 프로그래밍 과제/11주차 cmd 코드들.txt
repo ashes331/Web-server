@@ -10,6 +10,9 @@ creat database basicjsp;
 mysql -u root -p
 dongyang
 
+- mysql 들간 후 
+//select user, host from user;//
+
 - 유저(계정) 만들기
 create user 'jspid'@'localhost' identified by 'jsppass';
 
@@ -24,6 +27,9 @@ exit
 - 바꾼걸로 로그인해서 들어가기
 mysql -u jspid -p
 jsppass
+
+- database 만들거 쓰기
+use basicjsp;
 
 - table 만들기
 create table member(
@@ -40,12 +46,14 @@ create table test(
    content text not null
 );
 
+- 입력된 table 데이터 확인
+select *from accout(table 이름);
+
+
+
+-----------------------------------------------------------------------------------------------------
+
 mysqlconn
-
-
-
-
-
 
 create table accout(
    id   varchar(50) not null primary key,
